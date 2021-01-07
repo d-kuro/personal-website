@@ -5,27 +5,22 @@
 
 [[main]]
   name = "Home"
-  url = "#about"
+  url = "/"
   weight = 10
 
 [[main]]
   name = "Posts"
-  url = "#posts"
+  url = "post/"
   weight = 20
 
 [[main]]
-  name = "Projects"
-  url = "#projects"
+  name = "Talks"
+  url = "talk/"
   weight = 30
 
 [[main]]
-  name = "Talks"
-  url = "#talks"
-  weight = 40
-
-[[main]]
-  name = "Publications"
-  url = "#featured"
+  name = "About Me"
+  url = "author/d-kuro/"
   weight = 50
 
 [[main]]
@@ -33,9 +28,24 @@
   url = "#contact"
   weight = 60
 
+[[main]]
+  name = "Diaries"
+  url = "diaries/"
+  weight = 999
+
+# [[main]]
+#   name = "Projects"
+#   url = "#projects"
+#   weight = 30
+
+# [[main]]
+#   name = "Publications"
+#   url = "#featured"
+#   weight = 40
+
 # Link to a PDF of your resume/CV from the menu.
-# To enable, copy your resume/CV to `static/media/resume.pdf` and uncomment the lines below.
+# To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.
 # [[main]]
 #    name = "CV"
-#    url = "media/resume.pdf"
+#    url = "files/cv.pdf"
 #    weight = 70

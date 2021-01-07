@@ -1,45 +1,55 @@
----
-# An instance of the Experience widget.
-# Documentation: https://wowchemy.com/docs/page-builder/
-widget: experience
++++
+# Experience widget.
+widget = "experience"  # See https://sourcethemes.com/academic/docs/page-builder/
+headless = true  # This file represents a page section.
+active = true  # Activate this widget? true/false
+weight = 40  # Order that this section will appear.
 
-# This file represents a page section.
-headless: true
-
-# Order that this section appears on the page.
-weight: 40
-
-title: Experience
-subtitle:
+title = "Experience"
+subtitle = ""
 
 # Date format for experience
-#   Refer to https://wowchemy.com/docs/customization/#date-format
-date_format: Jan 2006
+#   Refer to https://sourcethemes.com/academic/docs/customization/#date-format
+date_format = "Jan 2006"
 
 # Experiences.
-#   Add/remove as many `experience` items below as you like.
+#   Add/remove as many `[[experience]]` blocks below as you like.
 #   Required fields are `title`, `company`, and `date_start`.
 #   Leave `date_end` empty if it's your current employer.
-#   Begin multi-line descriptions with YAML's `|2-` multi-line prefix.
-experience:
-  - title: CEO
-    company: GenCoin
-    company_url: ''
-    location: California
-    date_start: '2017-01-01'
-    date_end: ''
-    description: |2-
-        Responsibilities include:
-        
-        * Analysing
-        * Modelling
-        * Deploying
-        
-  - title: Professor
-    company: University X
-    company_url: ''
-    location: California
-    date_start: '2016-01-01'
-    date_end: '2016-12-31'
-    description: Taught electronic engineering and researched semiconductor physics.
----
+#   Begin/end multi-line descriptions with 3 quotes `"""`.
+[[experience]]
+  title = "SRE"
+  company = "Quipper, Ltd"
+  company_url = "https://www.quipper.com/"
+  location = "Tokyo"
+  date_start = "2019-10-01"
+  date_end = ""
+  description = """
+  * Operating Kubernetes clusters
+  * Developing GitOps tools
+  """
+
+[[experience]]
+  title = "SRE / Software Engineer"
+  company = "Classmethod, Inc."
+  company_url = "https://classmethod.jp/"
+  location = "Tokyo"
+  date_start = "2018-03-01"
+  date_end = "2019-09-30"
+  description = """
+  * Microservice development for e-commerce website backend APIs
+  * Migrating from Amazon ECS to Amazon EKS
+  """
+
+[[experience]]
+  title = "Software Engineer"
+  company = "technomobile Inc."
+  company_url = "https://www.tcmobile.jp/"
+  location = "Tokyo"
+  date_start = "2017-04-01"
+  date_end = "2018-02-28"
+  description = """
+  * Development e-commerce websites
+  """
+
++++
