@@ -1,0 +1,40 @@
+name: diary
+on:
+  schedule:
+    # JST 00:00
+    - cron: "0 15 * * *"
+jobs:
+  generate-diary:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          submodules: recursive
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: latest
+      - name: Hugo version
+        run: hugo version
+      - name: Hugo new
+        run: hugo new diaries/$(TZ=Asia/Tokyo date "+%Y%m")/$(TZ=Asia/Tokyo date "+%Y%m%d").md
+      - name: Setup template
+        run: echo -e "\n## Note\n" >> content/diaries/$(TZ=Asia/Tokyo date "+%Y%m")/$(TZ=Asia/Tokyo date "+%Y%m%d").md
+      - name: Setup Git
+        run: |
+          git remote set-url origin https://d-kuro:${GITHUB_TOKEN}@github.com/d-kuro/personal-website.git
+          git config --global user.name ${GIT_USER}
+          git config --global user.email ${GIT_EMAIL}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GIT_USER: "d-kuro"
+          GIT_EMAIL: "kurosawa7620@gmail.com"
+      - name: Commit and push
+        shell: bash --noprofile --norc {0}
+        run: |
+          git add .
+          git diff --cached --exit-code --quiet
+          if [ 0 -ne $? ]; then
+            git commit -m "Add post."
+            git push origin HEAD:${GITHUB_REF}
+          fi
