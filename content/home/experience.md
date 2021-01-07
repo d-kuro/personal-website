@@ -18,12 +18,22 @@ date_format = "Jan 2006"
 #   Leave `date_end` empty if it's your current employer.
 #   Begin/end multi-line descriptions with 3 quotes `"""`.
 [[experience]]
+  title = "Software Engineer"
+  company = "Z Lab Corporation"
+  company_url = "https://zlab.co.jp/"
+  location = "Tokyo"
+  date_start = "2021-01-01"
+  date_end = ""
+  description = """
+  """
+
+[[experience]]
   title = "SRE"
   company = "Quipper, Ltd"
   company_url = "https://www.quipper.com/"
   location = "Tokyo"
   date_start = "2019-10-01"
-  date_end = ""
+  date_end = "2020-12-31"
   description = """
   * Operating Kubernetes clusters
   * Developing GitOps tools

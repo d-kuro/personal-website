@@ -10,8 +10,8 @@ role: Software Engineer
 
 # Organizations/Affiliations
 organizations:
-- name: Quipper, Ltd
-  url: "https://www.quipper.com/"
+- name: Z Lab Corporation
+  url: "https://zlab.co.jp/"
 
 # Short bio (displayed in user profile at end of posts)
 bio: I'm a software engineer interested in Kubernetes and other cloud-native technologies.
@@ -69,7 +69,7 @@ user_groups:
 ---
 
 Hi, I'm a software engineer interested in Kubernetes and other cloud-native technologies.
-I am currently working as an SRE at Quipper, Ltd.
+I am currently working as an software engineer at Z Lab Corporation.
 
 I want to make use of the experience I gained on the job to contribute to other companies.
 If your company has any problems or questions about Kubernetes, please contact us!
